@@ -76,6 +76,7 @@ function submitNewRamenHandler(event){
     }
 
     addNewRamentoDatabase(newRamenObj);
+    ramenForm.reset();
 }
 
 function addNewRamentoDatabase(newRamenObj){
