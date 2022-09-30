@@ -156,8 +156,12 @@ function deleteRamenHandler(event){
         .then(res => res.json())
         .then(ramenObj => {
             console.log(ramenObj);
-            ramenMenu.innerHTML = '';
-            init();
+            const  ramenImg = document.getElementById(ramenId);
+            ramenImg.remove();
+            showFirstRamenDetails(); //feature the first ramen once a ramen is deleted
+
+            //ramenMenu.innerHTML = ''; //target the exact img element and remove it
+            //init(); //no need for this
         })
 }
 
